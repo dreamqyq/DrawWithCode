@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Draw a Pikachu</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="./vendor/prism.css">
+  <link rel="stylesheet" href="./style/default.css">
+  <style id="style"></style>
+</head>
+<body>
+  <div class="preview-wrapper">
+    <div class="preview">
+      <div class="nose"></div>
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="dimple left"></div>
+      <div class="dimple right"></div>
+      <div class="lips-wrapper">
+        <div class="lowerLip"></div>
+        <div class="upperLip left"></div>
+        <div class="upperLip right"></div>
+      </div>
+    </div>
+  </div>
+  <div class="code-wrapper">
+    <div class="top-wrapper">
+      <h2>代码展示区</h2>
+      <button data-speed="add">加速</button>
+      <button data-speed="reduce">减速</button>
+      <button data-speed="skip">跳过动画</button>
+      <button data-speed="current">
+        当前速度:<span class="speed">5</span>
+      </button>
+    </div>
+    <pre id="code"></pre>
+  </div>
+  <script src="./vendor/prism.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
+

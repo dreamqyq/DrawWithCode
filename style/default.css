@@ -1,0 +1,99 @@
+*{margin:0;padding:0;box-sizing:border-box;transition:all .5s;}
+*::after{box-sizing:border-box;}
+*::before{box-sizing:border-box;}
+body{
+  height:100vh;
+  min-width:1000px;
+  background:#FFE600;
+  perspective: 1000px;
+  perspective-origin:75% 0;
+}
+.code-wrapper{
+  height:100%;
+  width:50%;
+  background:#1e1e1e;
+  transform: rotateX(20deg) translateZ(-130px);
+  position: fixed; right: 2%; top: -6%;
+  color:#fff;
+}
+.code-wrapper.active{
+  transform:rotateX(380deg) translateZ(-130px);
+}
+.code-wrapper > .top-wrapper{
+  display:flex;
+  height:10%;
+  align-items:center;
+}
+.code-wrapper > .top-wrapper > h2{
+  margin:0 9% 0 20px;
+  color:#fff;
+}
+.code-wrapper > .top-wrapper > button{
+  font-size:18px;
+  height:34px;
+  width:70px;
+  margin:0 7px;
+  outline:none;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+  transition:none;
+}
+
+.code-wrapper > .top-wrapper > button > .speed{
+  color:red;
+  padding-left:6%;
+}
+.code-wrapper > .top-wrapper > button[data-speed="current"]{
+  width:128px;
+}
+.code-wrapper > .top-wrapper > button[data-speed="skip"]{
+  width:95px;
+}
+.code-wrapper > .top-wrapper > button:hover{
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+}
+.code-wrapper > .top-wrapper > button[data-speed="current"]:active{
+  transform:translateY(0);
+}
+.code-wrapper > .top-wrapper > button:active{
+  transform:translateY(2px);
+}
+.code-wrapper > #code{
+  height:90%;
+  font-size:18px;
+  padding:10px 15px;
+  overflow:auto;
+}
+.preview-wrapper{
+  display:flex;
+  height:100%;
+  width:50%;
+  justify-content:center;
+  align-items:center;
+  background:#FFE600;
+}
+.preview{
+  height:178px;
+  width:100%;
+  position:relative;
+  overflow:hidden;
+}
+.preview-wrapper .lips-wrapper{
+  width:140px;
+  height:128px;
+  position:absolute;
+  left:50%;
+  margin-left:-70px;
+  bottom:0;
+  overflow:hidden;
+}
