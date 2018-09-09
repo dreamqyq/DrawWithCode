@@ -1,4 +1,17 @@
 window.CodeData = {
+  firstCode: `
+/*
+* 今天我来为各位画一幅画吧
+* 画什么好呢
+* 看到左边一片空白的淡黄色背景了没
+* 那就是我的舞台
+* 现在，先别着急
+* 请注意右边两个可爱的圆形图标
+* 你想看我画什么，就请移动鼠标点击它呦
+* 选择以后
+* 就可以见证奇迹啦
+*/
+  `,
   PikachuCode: `
 /*
  * 下面我准备用代码来画一个可爱的皮卡丘
@@ -199,6 +212,14 @@ window.CodeData = {
 `,
 
   DoraemonCode: `
+/*
+ * 下面我准备用代码来画一个可爱的哆啦A梦
+ * 有木有很期待呀
+ * ok，话不多说，这就开始咯
+ * 请看左边
+ *
+ * 首先我们来画哆啦A梦的脑袋
+ */
 .head{
   width:240px;
   height:230px;
@@ -381,7 +402,7 @@ window.CodeData = {
   border-radius:5px;
   top:10px; 
   left:50%;
-  margin-left:-28px;
+  margin-left:-26px;
 }
 .hole{
   position:absolute;
@@ -470,9 +491,8 @@ window.CodeData = {
 }
 .arm.right{
   width:100px;
-  z-index:-1;
-  right:-68px;  
-  top:25px;
+  right:32px;  
+  top:225px;
   transform:rotateZ(30deg);
 }
 .arm::after{
@@ -514,7 +534,7 @@ window.CodeData = {
   position:absolute;
   width:45px;
   height:20px;
-  background:#fff;
+  background:#FFE600;
   border:2px solid #000;
   border-bottom:transparent;
   border-radius:50% 50% 0 0;
