@@ -28,7 +28,7 @@ body{
   margin:0 9% 0 20px;
   color:#fff;
 }
-.code-wrapper > .top-wrapper > button{
+.code-wrapper > .top-wrapper > button,.current{
   font-size:18px;
   height:34px;
   width:70px;
@@ -48,25 +48,44 @@ body{
   transition:none;
 }
 
-.code-wrapper > .top-wrapper > button > .speed{
+.code-wrapper > .top-wrapper > .current > .speed{
   color:red;
   padding-left:6%;
 }
-.code-wrapper > .top-wrapper > button[data-speed="current"]{
+.code-wrapper > .top-wrapper > .current{
+  text-align:center;
+  cursor:auto;
+  line-height:32px;
   width:128px;
 }
-.code-wrapper > .top-wrapper > button[data-speed="skip"]{
-  width:95px;
+.code-wrapper > .top-wrapper > button[data-speed="skip"]{ 
+  width:95px; 
 }
-.code-wrapper > .top-wrapper > button:hover{
-	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
-	background-color:#dfdfdf;
+.code-wrapper > .top-wrapper > button:hover{ 
+  background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%); 
+  background-color:#dfdfdf; 
+} 
+.code-wrapper > .top-wrapper > button:active{ 
+  transform:translateY(2px); 
 }
-.code-wrapper > .top-wrapper > button[data-speed="current"]:active{
-  transform:translateY(0);
+.code-wrapper > .top-wrapper > .select {
+  width:40px;
+  position:absolute;
+  right:15px;
+  top:100px;
 }
-.code-wrapper > .top-wrapper > button:active{
-  transform:translateY(2px);
+.code-wrapper > .top-wrapper > .select > span{
+  display:inline-block;
+  cursor:pointer;
+  margin: 5px 0;
+}
+.code-wrapper > .top-wrapper > .select > span > img{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+}
+.code-wrapper > .top-wrapper > .select > span:hover > img{
+  transform:translateX(-20px) scale(2);
 }
 .code-wrapper > #code{
   height:90%;

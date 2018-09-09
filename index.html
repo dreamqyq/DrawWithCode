@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="preview-wrapper">
-    <div class="preview">
+    <div class="preview pikachu">
       <div class="nose"></div>
       <div class="eye left"></div>
       <div class="eye right"></div>
@@ -22,6 +22,43 @@
         <div class="upperLip right"></div>
       </div>
     </div>
+    <div class="preview doraemon" style="display:none">
+      <div class="head">
+        <div class="eye left">
+          <div class="pupil"></div>
+        </div>
+        <div class="eye right">
+          <div class="pupil"></div>
+        </div>
+        <div class="face">
+          <div class="nose"></div>
+          <div class="middleLine"></div>
+          <div class="moustache left">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div class="moustache right">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div class="lips"></div>
+        </div>
+      </div>
+      <div class="neck">
+        <div class="bell">
+          <div class="hole"></div>
+        </div>
+      </div>
+      <div class="body">
+        <div class="belly"></div>
+        <div class="arm left"></div>
+        <div class="arm right"></div>
+      </div>
+      <div class="foot right"></div>
+      <div class="foot left"></div>
+    </div>
   </div>
   <div class="code-wrapper">
     <div class="top-wrapper">
@@ -29,13 +66,22 @@
       <button data-speed="add">加速</button>
       <button data-speed="reduce">减速</button>
       <button data-speed="skip">跳过动画</button>
-      <button data-speed="current">
+      <span class="current" data-speed="current">
         当前速度:<span class="speed">5</span>
-      </button>
+      </span>
+      <div class="select">
+        <span class="pikachuBtn" title="送你一只皮卡丘">
+          <img src="./img/pikachu.png" alt="" />
+        </span>
+        <span class="doraemonBtn" title="送你一个蓝胖子">
+          <img src="./img/doraemon.png" alt="" />
+        </span>
+      </div>
     </div>
     <pre id="code"></pre>
   </div>
   <script src="./vendor/prism.js"></script>
+  <script src="./js/codeData.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>
