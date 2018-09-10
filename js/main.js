@@ -108,6 +108,8 @@ class DrawCode {
 
 let draw = new DrawCode(window.CodeData.firstCode,selectFn)
 draw.init()
+
+// 用户选择后的回调函数 
 function selectFn(data,options){
   switch (data){
     case 'pikachu':

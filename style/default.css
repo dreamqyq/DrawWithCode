@@ -78,9 +78,26 @@ body{
   display:inline-block;
   cursor:pointer;
   margin: 5px 0;
+  position:relative;
 }
 .code-wrapper > .top-wrapper > .userSelector.disabled > span{
   cursor: not-allowed;
+}
+.code-wrapper > .top-wrapper > .userSelector.disabled > span > span.msg::after{
+  transition:all .5s;
+  content:'动画播放完之后才能点击呦';
+  width:210px;
+  opacity:0;
+  top:10px;
+  left:-240px;
+  text-align:center;
+  border-radius:10px;
+  position:absolute;
+  color:red;
+  background:#000;
+}
+.code-wrapper > .top-wrapper > .userSelector.disabled > span:hover > span.msg::after{
+  opacity:1;
 }
 .code-wrapper > .top-wrapper > .userSelector > span > img{
   width:40px;

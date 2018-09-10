@@ -8,8 +8,11 @@ window.CodeData = {
 * 现在，先别着急
 * 请注意右边两个可爱的圆形图标
 * 你想看我画什么，就请移动鼠标点击它呦
-* 选择以后
-* 就可以见证奇迹啦
+* 不过需要提示一下，如果在代码展示区中的动画未完成
+* 这两个图标是不能点击的，如果您觉得代码出现速度太慢了
+* 也可以点击上方按钮直接跳过呦
+* 接下来，请做出你的选择吧
+* 然后就是见证奇迹的时刻！
 */
   `,
   PikachuCode: `
@@ -206,6 +209,9 @@ window.CodeData = {
 /*
  * 好啦，全部完成 
  * 一个可爱的皮卡丘送给你，希望你能喜欢
+ * 没看过瘾？
+ * 你还可以点击右边的按钮选择再画一个蓝胖子呦
+ *
  * by Enoch
  */
 
@@ -233,6 +239,9 @@ window.CodeData = {
   margin:0 auto;
   z-index:1;
 }
+/*
+* 然后是眼睛
+*/
 .eye{
   width:60px;
   height:66px;
@@ -250,6 +259,9 @@ window.CodeData = {
 .eye.right{
 
 }
+/*
+* 加上瞳孔更可爱
+*/
 .pupil{
   position:absolute;
   height:20px;
@@ -279,6 +291,9 @@ window.CodeData = {
 .eye.right > .pupil::after{
   left:3px;
 }
+/*
+* 蓝胖子的脸蛋
+*/
 .face{
   height:180px;
   width:225px;
@@ -291,6 +306,9 @@ window.CodeData = {
   right:0;
   margin:0 auto;
 } 
+/*
+* 小鼻子
+*/
 .nose{
   height:40px;
   width:40px;
@@ -314,6 +332,9 @@ window.CodeData = {
   top:5px;
   left:9px;
 }
+/*
+* 然后胡须
+*/
 .middleLine{
   width:0;
   height:100px;
@@ -353,6 +374,9 @@ window.CodeData = {
   transform:rotateY(180deg);
 }
 
+/*
+* 送你一个微笑
+*/
 .lips{
   width:200px;
   height:60px;
@@ -368,6 +392,9 @@ window.CodeData = {
   border-radius:0 0 150px 150px/0 0 100px 100px; 
 }
 
+/*
+* 红色的围脖
+*/
 .neck{
   position:absolute;
   width:180px;
@@ -381,6 +408,9 @@ window.CodeData = {
   margin:0 auto;
   z-index:2;
 }
+/*
+* 再来一个铃铛～
+*/
 .bell{
   position:absolute;
   width:50px;
@@ -426,6 +456,9 @@ window.CodeData = {
   margin:0 auto;
 }
 
+/*
+* 然后是身体部分
+*/
 .body{
   height:170px;
   width:195px;
@@ -450,6 +483,9 @@ window.CodeData = {
   top:13px;
   z-index:1;
 }
+/*
+* 肚子上的口袋
+*/
 .belly{
   width:180px;
   height:140px;
@@ -475,6 +511,9 @@ window.CodeData = {
   right:0;
   margin:0 auto;
 }
+/*
+* 接下来就要画胳膊啦
+*/
 .arm{
   height:50px;
   background:#03A6D7;
@@ -482,6 +521,9 @@ window.CodeData = {
   position:absolute;
   border-radius:10px;
 }
+/*
+* 左胳膊
+*/
 .arm.left{
   width:130px;
   border-right:transparent;
@@ -489,12 +531,18 @@ window.CodeData = {
   left:-85px;
   top:-47px;
 }
+/*
+* 右胳膊
+*/
 .arm.right{
   width:100px;
   right:32px;  
   top:225px;
   transform:rotateZ(30deg);
 }
+/*
+* 来画上圆圆的小手
+*/
 .arm::after{
   content:'';
   border:2px solid #000;
@@ -512,6 +560,9 @@ window.CodeData = {
   right:-35px;
   top:-10px;
 }
+/*
+* 最后就是脚啦
+*/
 .foot{
   width:120px;
   height:50px;
@@ -542,5 +593,13 @@ window.CodeData = {
   margin:0 auto;
   bottom:-11px;
 }
+/*
+ * 好啦，全部完成 
+ * 一个可爱的蓝胖子送给你，希望你能喜欢
+ * 没看过瘾？
+ * 你还可以点击右边的按钮选择再画一只皮卡丘呦
+ *
+ * by Enoch
+ */
   `
 }
