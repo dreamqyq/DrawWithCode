@@ -156,7 +156,6 @@ body{
   position: absolute;
   overflow: hidden;
   z-index: 3;
-  animation:eye-close 6s 5s infinite;
   overflow:hidden;
 }
 @keyframes eye-close {

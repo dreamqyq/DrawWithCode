@@ -265,6 +265,7 @@ window.CodeData = {
   background-color: #fff;
   border-radius:30px;
   border: 2px solid  #000;
+  animation:eye-close 6s 5s infinite;
 }
 /*
 * 加上瞳孔更可爱
