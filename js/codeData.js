@@ -242,22 +242,29 @@ window.CodeData = {
 /*
 * 然后是眼睛
 */
-.eye{
-  width:60px;
-  height:66px;
-  border:2px solid #000;
-  background:#fff;
-  border-radius:30px;
+.eye-wrapper{
   position:absolute;
-  top:6px;
+  width:60px;
+  heigh:66px;
+  top:39px;
   left:50%;
   z-index:1;
 }
-.eye.left{
+.eye-wrapper.left{
   margin-left:-60px;
 }
-.eye.right{
-
+.eye{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 60px;
+  height: 66px;
+  background-color: #fff;
+  border-radius:30px;
+  border: 2px solid  #000;
 }
 /*
 * 加上瞳孔更可爱
@@ -279,16 +286,16 @@ window.CodeData = {
   border-radius:50%;
   top:4px;
 }
-.eye.left > .pupil{
+.eye-wrapper.left .pupil{
   right:7px;
 }
-.eye.left > .pupil::after{
+.eye-wrapper.left .pupil::after{
   right:3px;
 }
-.eye.right > .pupil{
+.eye-wrapper.right .pupil{
   left:7px;
 }
-.eye.right > .pupil::after{
+.eye-wrapper.right .pupil::after{
   left:3px;
 }
 /*

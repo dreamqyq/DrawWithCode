@@ -152,3 +152,18 @@ body{
 .preview.doraemon .pupil::after{
   transition:none;
 }
+.preview.doraemon .eye{
+  position: absolute;
+  overflow: hidden;
+  z-index: 3;
+  animation:eye-close 6s 5s infinite;
+  overflow:hidden;
+}
+@keyframes eye-close {
+  0%, 3%, 6%, 100% {
+    height:66px;
+  }
+  1.5%, 4.5% {
+    height:3px;
+  }
+}
