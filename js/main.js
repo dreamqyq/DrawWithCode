@@ -49,9 +49,6 @@ class DrawCode {
           case 'skip':
             this._skipAnimation()
             break
-          case 'current':
-            console.log(this.duration)
-            break
         }
         this.duration = this._checkDuration(this.duration)
         this.currentSpeed.innerHTML = 11 - this.duration/10
@@ -75,7 +72,7 @@ class DrawCode {
     this.style.innerHTML = this.code
     this.codeBoard.innerHTML = Prism.highlight(this.code, Prism.languages.css, 'css')
     this.codeBoard.scrollTop = this.codeBoard.scrollHeight
-    this._endAnimation()
+    this._endAnimation.call(this)
   }
   _removeEvents(el){
     let elClone = el.cloneNode(true);
@@ -84,8 +81,11 @@ class DrawCode {
   }
 
   _endAnimation(){
+    console.log(this)
+    console.log('我被执行了')
     document.querySelector('.code-wrapper').classList.add('active')
     this.userSelector.classList.remove('disabled')
+    console.log(this.userSelector)
     this.userSeletorEvent(this.callback).then(()=>{
       this._removeEvents(this.userSelector)
       this.userSelector.classList.add('disabled')
@@ -99,30 +99,53 @@ class DrawCode {
         if(el.matches('img')){
           let data = el.dataset.pic
           callback.call(this,data,[this.pikachuPreview,this.doraemonPreview])
-          resolve.call()
+          resolve.call(this)
         }
       })
     })
   }
 }
 
-let draw = new DrawCode(window.CodeData.firstCode,selectFn)
-draw.init()
-
+let drawFirst = new DrawCode(window.CodeData.firstCode,selectFn)
+drawFirst.init()
 // 用户选择后的回调函数 
 function selectFn(data,options){
   switch (data){
     case 'pikachu':
       options[0].classList.add('show')
       options[1].classList.remove('show')
-      draw = new DrawCode(window.CodeData.PikachuCode,selectFn)
-      draw.init()
+      let drawPikachu = new DrawCode(window.CodeData.PikachuCode,selectFn)
+      drawPikachu.init()
       break
     case 'doraemon':
       options[0].classList.remove('show')
       options[1].classList.add('show')
-      draw = new DrawCode(window.CodeData.DoraemonCode,selectFn)
-      draw.init()
+      let drawDoraemon = new DrawCode(window.CodeData.DoraemonCode,selectFn)
+      drawDoraemon.init()
       break
   }
+}
+
+eyeMoveByMouse()
+function eyeMoveByMouse(){
+  let doraemon = document.querySelector('.doraemon')
+  let eye = doraemon.querySelectorAll(".eye")
+  for (let i = 0, len = eye.length; i < len; i++ ) {
+    eye[i].innerEye = eye[i].querySelector(".pupil");
+  }
+  function eyeMover (event) {
+    for (let i = 0, len = eye.length; i < len; i++) {
+      eye[i].innerEye.style.left = numberRange((event.clientX / window.innerWidth) * 100) + "%"
+      eye[i].innerEye.style.top = numberRange((event.clientY / window.innerHeight) * 100) + "%"
+    }
+  }
+  function numberRange(num){
+    if(num>60){
+      num = 60
+    }else if(num<10){
+      num = 10
+    }
+    return num
+  }
+  document.addEventListener("mousemove", eyeMover)
 }

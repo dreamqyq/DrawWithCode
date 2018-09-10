@@ -137,7 +137,7 @@ body{
   width:401px;
   height:410px;
 }
-.preview-wrapper .lips-wrapper{
+.preview-wrapper > .pikachu  .lips-wrapper{
   width:140px;
   height:128px;
   position:absolute;
@@ -145,4 +145,10 @@ body{
   margin-left:-70px;
   bottom:0;
   overflow:hidden;
+}
+.preview.doraemon .pupil{
+  transition:none;
+}
+.preview.doraemon .pupil::after{
+  transition:none;
 }
