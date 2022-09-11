@@ -2,7 +2,8 @@
 *::after{box-sizing:border-box;}
 *::before{box-sizing:border-box;}
 body{
-  height:100vh;
+  height:92vh;
+  width: 95vw;
   min-width:1000px;
   background:#FFE600;
   perspective: 1000px;
@@ -13,7 +14,7 @@ body{
   width:50%;
   background:#1e1e1e;
   transform: rotateX(20deg) translateZ(-130px);
-  position: fixed; right: 2%; top: -6%;
+  position: fixed; right: 2%; top: -5%;
   color:#fff;
 }
 .code-wrapper.active{
